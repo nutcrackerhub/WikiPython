@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WikiThon - To do anything in Python</title>
+    <link rel="icon" href="P (3).jpg">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: rgb(147, 184, 115);
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        header img {
+            height: 50px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #FFEB3B;
+        }
+
+        .menu-toggle {
+            display: none;
+            cursor: pointer;
+        }
+
+        .menu-toggle span {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            margin: 5px 0;
+            transition: 0.4s;
+        }
+
+        main {
+            flex: 1;
+            padding: 20px;
+            background: #f4f4f4;
+        }
+
+        section {
+            margin-bottom: 40px;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            margin-bottom: 10px;
+        }
+
+        form {
+            display: grid;
+            gap: 10px;
+        }
+
+        form input, form textarea {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            width: 100%;
+        }
+
+        form button {
+            padding: 10px;
+            background-color: rgb(147, 184, 115);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        form button:hover {
+            background-color: rgb(147, 184, 115);
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+                display: none;
+            }
+
+            nav ul.show {
+                display: flex;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Cabeçalho do site -->
+    <header>
+        <img src="Thon (2).jpg" alt="" />
+        <nav>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul id="menu">
+                <li><a href="#home">Início</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="inscrição.html">Cadastro</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Seção principal -->
+    <main>
+        <section id="home">
+            <h2>Início<h2>
+            <h3>Bem-vindo ao nosso site! </h3>
+            <br>
+            <h4>Descubra o Poder da Programação com o curso de Python da WikiThon!</h4>
+            <p>Está pronto para transformar sua carreira e explorar novas oportunidades? Nosso curso de Python é a chave para abrir as portas do mundo da programação. Com uma metodologia prática e interativa, você aprenderá desde os conceitos básicos até técnicas avançadas de maneira simples e eficaz.</p>
+            <br>
+            <h3>Por que escolher nosso curso?</h3>
+            <br>
+            <h4>- Instrutores Especializados:</h4><p> Aprenda com profissionais experientes e apaixonados por ensinar.</p>
+            <br>
+            <h4>- Conteúdo Atualizado:</h4><p> Mantenha-se à frente com materiais que refletem as tendências e necessidades do mercado.</p>
+            <br>
+            <h4>- Aulas Interativas:</h4><p> Exercícios práticos e projetos desafiadores para consolidar seu conhecimento.</p>
+            <br>
+            <h4>- Flexibilidade:</h4><p> Estude de qualquer lugar e a qualquer hora.</p>
+            <br>
+            <h4>- Certificação Reconhecida:</h3><p> Dê um upgrade no seu currículo com um certificado de conclusão respeitado.</p>
+            <br>
+            <h3>Não perca a chance de dominar a linguagem que está revolucionando o mundo da tecnologia. Inscreva-se agora e comece sua jornada no universo do Python!</h3>
+        </section>
+
+        <section id="sobre">
+            <h2>Sobre</h2>
+            <p>Acreditamos que a aprendizagem é a chave para a inovação e o crescimento. Nossos valores orientam cada aspecto do nosso trabalho e garantem que nossos cursos de Python ofereçam o máximo valor aos nossos alunos.</p>
+        </section>
+
+        <section id="servicos">
+            <h2>Serviços</h2>
+            <p>Na WikiThon, oferecemos uma gama abrangente de serviços para atender às suas necessidades de aprendizagem em Python: </p>
+            <br>
+            <h4>- Suporte ao Aluno:</h4><p> Nosso suporte ao aluno é dedicado a garantir que você tenha a assistência necessária durante sua jornada de aprendizagem, com respostas rápidas e eficazes a qualquer dúvida ou dificuldade.</p>
+            <br>
+            <h4>- Cursos Online:</h4><p> Oferecemos cursos completos de Python, desde o nível básico até o avançado. Nossos cursos incluem aulas em vídeo, materiais de leitura, e exercícios práticos, permitindo que você aprenda no seu próprio ritmo.</p>
+            <br>
+            <h4>- Recursos Adicionais:</h4><p> Disponibilizamos recursos complementares como fóruns de discussão, grupos de estudo e materiais adicionais para enriquecer sua experiência de aprendizado e fomentar a colaboração entre alunos.</p>
+            <br>
+            <h4>- Projetos Práticos:</h4><p> Oferecemos oportunidades para trabalhar em projetos reais e desafiadores, ajudando você a aplicar o que aprendeu em situações práticas e a construir um portfólio robusto.</p>
+            <br>
+            <h3> Estamos aqui para ajudá-lo a dominar Python e alcançar seus objetivos profissionais com nossos serviços de alta qualidade e suporte contínuo, tá esperando o que para fazer seu cadastro?! Clique <a href="inscrição.html">aqui</a> para se inscrever.</h3>
+        </section>
+
+    </main>
+
+    <!-- Rodapé do site -->
+    <footer>
+        <p>&copy; 2024 WikiThon. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            menu.classList.toggle('show');
+        }
+    </script>
+</body>
+</html>

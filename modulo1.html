@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WikiThon - To do anything</title>
+    <link rel="icon" href="P (3).jpg">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #f4f4f4; /* Cor do texto ajustada para contraste com fundo escuro */
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: #333; /* Fundo escuro para o corpo da página */
+        }
+
+        header {
+            background-color: rgb(147, 184, 115);
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        header img {
+            height: 50px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #FFEB3B;
+        }
+
+        .menu-toggle {
+            display: none;
+            cursor: pointer;
+        }
+
+        .menu-toggle span {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            margin: 5px 0;
+            transition: 0.4s;
+        }
+
+        main {
+            flex: 1;
+            padding: 20px;
+            background: #222; /* Fundo escuro para a área principal */
+            color: #f4f4f4; /* Cor do texto ajustada para contraste com fundo escuro */
+        }
+
+        section {
+            margin-bottom: 40px;
+            padding: 20px;
+            background: #444; /* Fundo mais claro para seções */
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h2, h3, h4 {
+            color: #f4f4f4; /* Cor dos cabeçalhos ajustada para contraste com fundo escuro */
+        }
+
+        form {
+            display: grid;
+            gap: 10px;
+        }
+
+        form input, form textarea {
+            padding: 10px;
+            border: 1px solid #555; /* Cor de borda ajustada para contraste */
+            border-radius: 5px;
+            width: 100%;
+            background-color: #333; /* Fundo escuro para campos de formulário */
+            color: #f4f4f4; /* Cor do texto ajustada para contraste com fundo escuro */
+        }
+
+        form button {
+            padding: 10px;
+            background-color: rgb(147, 184, 115);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        form button:hover {
+            background-color: rgb(147, 184, 115);
+        }
+
+        footer {
+            background-color: #222; /* Fundo escuro para o rodapé */
+            color: #f4f4f4; /* Cor do texto ajustada para contraste com fundo escuro */
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+                display: none;
+            }
+
+            nav ul.show {
+                display: flex;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Cabeçalho do site -->
+    <header>
+        <img src="Thon (2).jpg" alt="" />
+        <nav>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul id="menu">
+                <li><a href="htmlsonsaad.html">Início</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="modulo2.html">Modulo II</a></li>
+                <li><a href="modulo3.html">Modulo III</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Seção principal -->
+    <main>
+        <h1 style="text-align: center;">Python: Um Guia Completo.</h1>
+        <br>
+        <p style="width: 100%;">Python é uma linguagem de programação de alto nível que se destaca pela sua simplicidade e clareza, tornando-a ideal tanto para iniciantes quanto para desenvolvedores experientes. Abaixo, exploramos como instalar e configurar Python, suas vantagens e desvantagens, suas aplicações e os conceitos fundamentais da linguagem.</p>
+        <br>
+
+        <section id="home">
+            <h2>Instalação e Configuração</h2>
+            <h4>1. Obtenha o Python: </h4><p>Vá ao site oficial do Python ([python.org](https://www.python.org/)) e baixe a versão mais adequada para o seu sistema operacional (Windows, macOS, Linux).</p>
+            <br>
+            <h4>2. Execute o Instalador: </h4><p>No Windows, inicie o instalador e não se esqueça de marcar a opção “Add Python to PATH” para facilitar o acesso ao Python a partir do prompt de comando. Em macOS e Linux, você pode instalar Python usando gerenciadores de pacotes como Homebrew ou apt-get.</p>
+            <br>
+            <h4>3. Verifique a Instalação: </h4><p>Abra o terminal ou o prompt de comando e digite "python-version" para confirmar que a instalação foi realizada corretamente.</p>
+            </section>
+
+        <section id="sobre">
+            <h2>Configuração</h2>
+            <p>Para gerenciar dependências de forma eficaz, é recomendável usar ambientes virtuais. Você pode criar um ambiente virtual com o comando “python -m venv nome_do_ambiente” e ativá-lo com “source nome_do_ambiente/bin/activate” no macOS/Linux ou “nome_do_ambiente\Scripts\activate” no Windows. Isso ajuda a isolar as dependências do projeto e mantém o sistema organizado.</p>
+        </section>
+
+        <section id="servicos">
+            <h2>Vantagens</h2>
+            <h4>1. Sintaxe Clara e Simples: </h4><p>Python possui uma sintaxe intuitiva que facilita a escrita e a compreensão do código.</p>
+            <br>
+            <h4>2. Comunidade Ativa: </h4><p>A vasta comunidade de Python contribui com uma enorme variedade de bibliotecas e frameworks, tornando o desenvolvimento mais rápido e eficiente.</p>
+            <br>
+            <h4>3. Versatilidade: </h4><p>Python é usado em muitas áreas, desde desenvolvimento web até ciência de dados e automação.</p>
+            <br>
+            <h4>4. Integração com Outras Linguagens: </h4><p>É possível integrar Python com outras linguagens como C e C++, o que oferece flexibilidade adicional e melhor desempenho.</p>
+        </section>
+
+        <section id="servicos">
+            <h2>Desvantagens</h2>
+            <h4>1. Desempenho: </h4><p>Como uma linguagem interpretada, Python pode ser mais lento do que linguagens compiladas, como C++ ou Java.</p>
+            <br>
+            <h4>2. Uso de Memória: </h4><p>Python tende a usar mais memória, o que pode ser um problema para aplicações que exigem alta performance.</p>
+            <br>
+            <h4>3. GIL (Global Interpreter Lock): </h4><p>O GIL pode restringir a execução de múltiplas threads simultaneamente, afetando o desempenho de aplicações multithreaded.</p>
+        </section>
+
+        <section id="servicos">
+            <h2>Aplicações</h2>
+            <h4>1. Desenvolvimento Web: </h4><p>Frameworks como Django e Flask são usados para criar aplicações web sofisticadas e escaláveis.</p>
+            <br>
+            <h4>2. Ciência de Dados e Machine Learning: </h4><p>Ferramentas como Pandas, NumPy e Scikit-Learn são amplamente utilizadas para análise de dados e construção de modelos de machine learning.</p>
+            <br>
+            <h4>3. Automação e Scripts: </h4><p>Python é ideal para automatizar tarefas rotineiras e manipular dados de forma eficiente.</p>
+            <br>
+            <h4>4. Desenvolvimento de Jogos: </h4><p>: Bibliotecas como Pygame permitem criar jogos 2D de maneira fácil e rápida.</p>
+
+        </section>
+
+        <section id="servicos">
+            <h2>Conceitos Básicos da Linguagem</h2>
+            <h4>1. Estrutura do Programa: </h4><p> - Um programa em Python é formado por uma série de instruções executadas sequencialmente. Cada arquivo Python usa a extensão `.py` e pode conter funções, classes e blocos de código.</p>
+            <br>
+            <p> - Exemplo:</p>
+            <br>
+            <h4>2. Execute o Instalador: </h4><p>No Windows, inicie o instalador e não se esqueça de marcar a opção “Add Python to PATH” para facilitar o acesso ao Python a partir do prompt de comando. Em macOS e Linux, você pode instalar Python usando gerenciadores de pacotes como Homebrew ou apt-get.</p>
+            <br>
+            <h4>3. Verifique a Instalação: </h4><p>Abra o terminal ou o prompt de comando e digite `python --version` para confirmar que a instalação foi realizada corretamente.</p>
+        </section>
+
+        <section id="servicos">
+            <h2>Instalação e Configuração</h2>
+            <h4>1. Obtenha o Python: </h4><p>Vá ao site oficial do Python ([python.org](https://www.python.org/)) e baixe a versão mais adequada para o seu sistema operacional (Windows, macOS, Linux).</p>
+            <br>
+            <h4>2. Execute o Instalador: </h4><p>No Windows, inicie o instalador e não se esqueça de marcar a opção “Add Python to PATH” para facilitar o acesso ao Python a partir do prompt de comando. Em macOS e Linux, você pode instalar Python usando gerenciadores de pacotes como Homebrew ou apt-get.</p>
+            <br>
+            <h4>3. Verifique a Instalação: </h4><p>Abra o terminal ou o prompt de comando e digite `python --version` para confirmar que a instalação foi realizada corretamente.</p>
+        </section>
+
+        <section id="servicos">
+            <h2>Instalação e Configuração</h2>
+            <h4>1. Obtenha o Python: </h4><p>Vá ao site oficial do Python ([python.org](https://www.python.org/)) e baixe a versão mais adequada para o seu sistema operacional (Windows, macOS, Linux).</p>
+            <br>
+            <h4>2. Execute o Instalador: </h4><p>No Windows, inicie o instalador e não se esqueça de marcar a opção “Add Python to PATH” para facilitar o acesso ao Python a partir do prompt de comando. Em macOS e Linux, você pode instalar Python usando gerenciadores de pacotes como Homebrew ou apt-get.</p>
+            <br>
+            <h4>3. Verifique a Instalação: </h4><p>Abra o terminal ou o prompt de comando e digite `python --version` para confirmar que a instalação foi realizada corretamente.</p>
+        </section>
+
+        <section id="servicos">
+            <h2>Instalação e Configuração</h2>
+            <h4>1. Obtenha o Python: </h4><p>Vá ao site oficial do Python ([python.org](https://www.python.org/)) e baixe a versão mais adequada para o seu sistema operacional (Windows, macOS, Linux).</p>
+            <br>
+            <h4>2. Execute o Instalador: </h4><p>No Windows, inicie o instalador e não se esqueça de marcar a opção “Add Python to PATH” para facilitar o acesso ao Python a partir do prompt de comando. Em macOS e Linux, você pode instalar Python usando gerenciadores de pacotes como Homebrew ou apt-get.</p>
+            <br>
+            <h4>3. Verifique a Instalação: </h4><p>Abra o terminal ou o prompt de comando e digite `python --version` para confirmar que a instalação foi realizada corretamente.</p>
+        </section>
+
+        <section id="servicos">
+            <h2>Instalação e Configuração</h2>
+            <h4>1. Obtenha o Python: </h4><p>Vá ao site oficial do Python ([python.org](https://www.python.org/)) e baixe a versão mais adequada para o seu sistema operacional (Windows, macOS, Linux).</p>
+            <br>
+            <h4>2. Execute o Instalador: </h4><p>No Windows, inicie o instalador e não se esqueça de marcar a opção “Add Python to PATH” para facilitar o acesso ao Python a partir do prompt de comando. Em macOS e Linux, você pode instalar Python usando gerenciadores de pacotes como Homebrew ou apt-get.</p>
+            <br>
+            <h4>3. Verifique a Instalação: </h4><p>Abra o terminal ou o prompt de comando e digite `python --version` para confirmar que a instalação foi realizada corretamente.</p>
+        </section>
+
+        <section id="servicos">
+            <h2>Instalação e Configuração</h2>
+            <h4>1. Obtenha o Python: </h4><p>Vá ao site oficial do Python ([python.org](https://www.python.org/)) e baixe a versão mais adequada para o seu sistema operacional (Windows, macOS, Linux).</p>
+            <br>
+            <h4>2. Execute o Instalador: </h4><p>No Windows, inicie o instalador e não se esqueça de marcar a opção “Add Python to PATH” para facilitar o acesso ao Python a partir do prompt de comando. Em macOS e Linux, você pode instalar Python usando gerenciadores de pacotes como Homebrew ou apt-get.</p>
+            <br>
+            <h4>3. Verifique a Instalação: </h4><p>Abra o terminal ou o prompt de comando e digite `python --version` para confirmar que a instalação foi realizada corretamente.</p>
+        </section>
+
+        <section id="servicos">
+            <h2>Instalação e Configuração</h2>
+            <h4>1. Obtenha o Python: </h4><p>Vá ao site oficial do Python ([python.org](https://www.python.org/)) e baixe a versão mais adequada para o seu sistema operacional (Windows, macOS, Linux).</p>
+            <br>
+            <h4>2. Execute o Instalador: </h4><p>No Windows, inicie o instalador e não se esqueça de marcar a opção “Add Python to PATH” para facilitar o acesso ao Python a partir do prompt de comando. Em macOS e Linux, você pode instalar Python usando gerenciadores de pacotes como Homebrew ou apt-get.</p>
+            <br>
+            <h4>3. Verifique a Instalação: </h4><p>Abra o terminal ou o prompt de comando e digite `python --version` para confirmar que a instalação foi realizada corretamente.</p>
+        </section>
+
+        <section id="servicos">
+            <video width="640" height="360" controls>
+                <source src="Wildlife.mp4" type="video/mp4"> 
+            </video>
+        </section>
+
+    </main>
+
+    <!-- Rodapé do site -->
+    <footer>
+        <p>&copy; 2024 WikiThon. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            menu.classList.toggle('show');
+        }
+    </script>
+</body>
+</html>

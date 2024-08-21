@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WikiThon - To do anything</title>
+    <link rel="icon" href="P (3).jpg">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: #333;
+        }
+
+        header {
+            background-color: rgb(147, 184, 115);
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        header img {
+            height: 50px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #FFEB3B;
+        }
+
+        .menu-toggle {
+            display: none;
+            cursor: pointer;
+        }
+
+        .menu-toggle span {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            margin: 5px 0;
+            transition: 0.4s;
+        }
+
+        main {
+            flex: 1;
+            padding: 20px;
+            background: #222;
+            color: #f4f4f4;
+        }
+
+        .sections-container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        section {
+            flex: 1;
+            margin: 0 10px;
+            padding: 20px;
+            background: #444;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        section#sobre {
+            text-align: center;
+        }
+
+        section#servicos {
+            text-align: right;
+        }
+
+        h2, h3, h4 {
+            color: #f4f4f4;
+        }
+
+        footer {
+            background-color: #222;
+            color: #f4f4f4;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        @media (max-width: 768px) {
+            .sections-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            section {
+                margin: 20px 0;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+                display: none;
+            }
+
+            nav ul.show {
+                display: flex;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Cabeçalho do site -->
+    <header>
+        <img src="Thon (2).jpg" alt="" />
+        <nav>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul id="menu">
+                <li><a href="htmlsonsaad.html">Início</a></li>
+                <li><a href="modulo1.html">Modulo I</a></li>
+                <li><a href="modulo2.html">Modulo II</a></li>
+                <li><a href="modulo3.html">Modulo III</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Seção principal -->
+    <main>
+        <div class="sections-container">
+            <section id="home">
+                <h2 style="text-align: center;"><a href="modulo1.html">Modulo I</a></h2>
+                <img src="pythonE.jpg" width=100% />
+                <h3 style="text-align: center;">Conteúdo:</h3>
+                <p style="text-align: left;">- Instalação e configuração;</p><p>- Vantagens;</p><P>- Desvantagens;</P><p>- Aplicações;</p><p>- Conceitos Básicos da Linguagem (Estrutura do programa, Variáveis e seus tipos, Operadores, Estruturas de controles (condições, laços,etc));</p><p>- Exemplos de programas.</p>
+                </section>
+
+            <section id="sobre">
+                <h2 style="text-align: center;"><a href="modulo2.html">Modulo II</a></h2>
+                <img src="pythonE.jpg" width=100% />
+                <h3 style="text-align: center;">Conteúdo:</h3>
+                <p style="text-align: left;">- Programas Básicos (Fatorial, Primo, .......etc);</p><p style="text-align: left;">- Vetores;</p><p style="text-align: left;">- Matrizes;</p><p style="text-align: left;">- Arquivos (criar, ler, apagar, etc).</p>
+            </section>
+
+            <section id="servicos">
+                <h2 style="text-align: center;"><a href="modulo3.html">Modulo III</a></h2>
+                <img src="pythonE.jpg" width=100% />
+                <h3 style="text-align: center;">Conteúdo:</h3>
+                <p style="text-align: left;">- Algoritmos de Busca e Ordenação.</p>
+            </section>
+        </div>
+    </main>
+
+    <!-- Rodapé do site -->
+    <footer>
+        <p>&copy; 2024 WikiThon. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            menu.classList.toggle('show');
+        }
+    </script>
+</body>
+</html>

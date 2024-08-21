@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WikiThon - To do anything</title>
+    <link rel="icon" href="P (3).jpg">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #f4f4f4; /* Cor do texto ajustada para contraste com fundo escuro */
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: #333; /* Fundo escuro para o corpo da página */
+        }
+
+        header {
+            background-color: rgb(147, 184, 115);
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        header img {
+            height: 50px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #FFEB3B;
+        }
+
+        .menu-toggle {
+            display: none;
+            cursor: pointer;
+        }
+
+        .menu-toggle span {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            margin: 5px 0;
+            transition: 0.4s;
+        }
+
+        main {
+            flex: 1;
+            padding: 20px;
+            background: #222; /* Fundo escuro para a área principal */
+            color: #f4f4f4; /* Cor do texto ajustada para contraste com fundo escuro */
+        }
+
+        section {
+            margin-bottom: 40px;
+            padding: 20px;
+            background: #444; /* Fundo mais claro para seções */
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h2, h3, h4 {
+            color: #f4f4f4; /* Cor dos cabeçalhos ajustada para contraste com fundo escuro */
+        }
+
+        form {
+            display: grid;
+            gap: 10px;
+        }
+
+        form input, form textarea {
+            padding: 10px;
+            border: 1px solid #555; /* Cor de borda ajustada para contraste */
+            border-radius: 5px;
+            width: 100%;
+            background-color: #333; /* Fundo escuro para campos de formulário */
+            color: #f4f4f4; /* Cor do texto ajustada para contraste com fundo escuro */
+        }
+
+        form button {
+            padding: 10px;
+            background-color: rgb(147, 184, 115);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        form button:hover {
+            background-color: rgb(147, 184, 115);
+        }
+
+        footer {
+            background-color: #222; /* Fundo escuro para o rodapé */
+            color: #f4f4f4; /* Cor do texto ajustada para contraste com fundo escuro */
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+                display: none;
+            }
+
+            nav ul.show {
+                display: flex;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Cabeçalho do site -->
+    <header>
+        <img src="Thon (2).jpg" alt="" />
+        <nav>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul id="menu">
+                <li><a href="htmlsonsaad.html">Início</a></li>
+                <li><a href="inscrição.html">Inscrição</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Seção principal -->
+    <main>
+        <section style="margin: 60px 60px;">
+            <h2>Faça login</h2>
+            <form action="menu.html">
+                <label for="email">Digite seu email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="nome">Digite sua senha:</label>
+                <input type="text" id="nome" name="senha" required>
+
+                <label for="mensagem">Tem algum comentário ou dúvida a respeito do curso? Escreva no espaço abaixo:</label>
+                <textarea id="mensagem" name="mensagem" required></textarea>
+
+                <p>Não tem uma conta? Clique <a href="inscrição.html">aqui</a> para se cadastrar.></p>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Rodapé do site -->
+    <footer>
+        <p>&copy; 2024 WikiThon. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            menu.classList.toggle('show');
+        }
+    </script>
+</body>
+</html>
