@@ -161,7 +161,7 @@
             <ul id="menu">
                 <li><a href="htmlsonsaad.html">Início</a></li>
                 <li><a href="menu.html">Menu</a></li>
-                <li><a href="modulo2.html">Modulo II</a></li>
+                <li><a href="modulo1.html">Modulo I</a></li>
                 <li><a href="modulo3.html">Modulo III</a></li>
             </ul>
         </nav>
@@ -169,120 +169,123 @@
 
     <!-- Seção principal -->
     <main>
-        <h1 style="text-align: center;">Python: Um Guia Completo.</h1>
+        <h1 style="text-align: center;">Programas Básicos em Programação: Exemplos e Explicações.</h1>
         <br>
-        <p style="width: 100%;">Python é uma linguagem de programação de alto nível que se destaca pela sua simplicidade e clareza, tornando-a ideal tanto para iniciantes quanto para desenvolvedores experientes. Abaixo, exploramos como instalar e configurar Python, suas vantagens e desvantagens, suas aplicações e os conceitos fundamentais da linguagem.</p>
+        <p style="width: 100%;">Neste modulo, abordaremos conceitos fundamentais em programação, como programas básicos (fatorial, números primos, etc.), vetores, matrizes e manipulação de arquivos. Esses tópicos são essenciais para o desenvolvimento de habilidades sólidas em programação. Vamos ver cada um deles com explicações e exemplos práticos.</p>
         <br>
 
         <section id="home">
-            <h2>Instalação e Configuração</h2>
-            <h4>1. Obtenha o Python: </h4><p>Vá ao site oficial do Python ([python.org](https://www.python.org/)) e baixe a versão mais adequada para o seu sistema operacional (Windows, macOS, Linux).</p>
+            <h2>1. Fatorial</h2>
+            <p>O fatorial de um número "n" é o produto de todos os números inteiros de "1" até "n". Em notação matemática, isso é representado como "n!".</p>>
             <br>
-            <h4>2. Execute o Instalador: </h4><p>No Windows, inicie o instalador e não se esqueça de marcar a opção “Add Python to PATH” para facilitar o acesso ao Python a partir do prompt de comando. Em macOS e Linux, você pode instalar Python usando gerenciadores de pacotes como Homebrew ou apt-get.</p>
+            <h4>Exemplo de Código:</h4>
+            <p>def fatorial(n):</p>
+            <p>    resultado = 1</p>
+            <p>    for i in range(1, n + 1):</p>
+            <p>    resultado *= i</p>
+            <p>    return resultado</p>
+            <img src="fatorial.jpg.png" width=100% />
             <br>
-            <h4>3. Verifique a Instalação: </h4><p>Abra o terminal ou o prompt de comando e digite "python-version" para confirmar que a instalação foi realizada corretamente.</p>
-            </section>
+            <h4>Teste:</h4>
+            <p>print(fatorial(4)) # Saída: 24</p>
+        </section>
 
         <section id="sobre">
-            <h2>Configuração</h2>
-            <p>Para gerenciar dependências de forma eficaz, é recomendável usar ambientes virtuais. Você pode criar um ambiente virtual com o comando “python -m venv nome_do_ambiente” e ativá-lo com “source nome_do_ambiente/bin/activate” no macOS/Linux ou “nome_do_ambiente\Scripts\activate” no Windows. Isso ajuda a isolar as dependências do projeto e mantém o sistema organizado.</p>
+            <h2>2. Verificação de Números Primos</h2>
+            <p>Um número é considerado primo se ele for maior que 1 e não puder ser dividido por nenhum outro número além de 1 e dele mesmo. Exemplos de números primos incluem 2, 3, 5, 7 e 11.</p>
+            <h4>Exemplo de Código:</h4>
+            <p>def eh_primo(n):</p>
+            <p>    if n < 2:</p>
+            <p>        return False</p>
+            <p>    for i in range(2, int(n ** 0.5) + 1):</p>
+            <p>        if n % i == 0:</p>
+            <p>            return False</p>
+            <p>    return True</p>
+            <img src="primo.jpg.png" width=100% />
+            <br>
+            <h4>Teste:</h4>
+            <p>print(eh_primo(7)) # Saída: True</p>
+            <p>print(eh_primo(8)) # Saída: False</p>
         </section>
 
         <section id="servicos">
-            <h2>Vantagens</h2>
-            <h4>1. Sintaxe Clara e Simples: </h4><p>Python possui uma sintaxe intuitiva que facilita a escrita e a compreensão do código.</p>
+            <h2>3. Vetores</h2>
+            <p>Vetores são estruturas de dados que armazenam uma sequência de elementos, que podem ser acessados por seus índices. No Python, os vetores são chamados de listas.</p>>
             <br>
-            <h4>2. Comunidade Ativa: </h4><p>A vasta comunidade de Python contribui com uma enorme variedade de bibliotecas e frameworks, tornando o desenvolvimento mais rápido e eficiente.</p>
+            <h4>Exemplo de Código:</h4>
+            <p># Criação de um vetor (lista)</p>
+            <p>vetor = [10, 20, 30, 40, 50]</p>
             <br>
-            <h4>3. Versatilidade: </h4><p>Python é usado em muitas áreas, desde desenvolvimento web até ciência de dados e automação.</p>
+            <p># Acessando elementos do vetor</p>
+            <p>print(vetor[0]) # Saída: 10</p>
+            <p>print(vetor[2]) # Saída: 30</p>
             <br>
-            <h4>4. Integração com Outras Linguagens: </h4><p>É possível integrar Python com outras linguagens como C e C++, o que oferece flexibilidade adicional e melhor desempenho.</p>
-        </section>
-
-        <section id="servicos">
-            <h2>Desvantagens</h2>
-            <h4>1. Desempenho: </h4><p>Como uma linguagem interpretada, Python pode ser mais lento do que linguagens compiladas, como C++ ou Java.</p>
-            <br>
-            <h4>2. Uso de Memória: </h4><p>Python tende a usar mais memória, o que pode ser um problema para aplicações que exigem alta performance.</p>
-            <br>
-            <h4>3. GIL (Global Interpreter Lock): </h4><p>O GIL pode restringir a execução de múltiplas threads simultaneamente, afetando o desempenho de aplicações multithreaded.</p>
-        </section>
-
-        <section id="servicos">
-            <h2>Aplicações</h2>
-            <h4>1. Desenvolvimento Web: </h4><p>Frameworks como Django e Flask são usados para criar aplicações web sofisticadas e escaláveis.</p>
-            <br>
-            <h4>2. Ciência de Dados e Machine Learning: </h4><p>Ferramentas como Pandas, NumPy e Scikit-Learn são amplamente utilizadas para análise de dados e construção de modelos de machine learning.</p>
-            <br>
-            <h4>3. Automação e Scripts: </h4><p>Python é ideal para automatizar tarefas rotineiras e manipular dados de forma eficiente.</p>
-            <br>
-            <h4>4. Desenvolvimento de Jogos: </h4><p>: Bibliotecas como Pygame permitem criar jogos 2D de maneira fácil e rápida.</p>
+            <p># Alterando um valor no vetor</p>
+            <p>vetor[1] = 25</p>
+            <p>print(vetor) # Saída: [10, 25, 30, 40, 50]</p>
+            <img src="vetor.jpg.png" width=100% />
 
         </section>
 
         <section id="servicos">
-            <h2>Conceitos Básicos da Linguagem</h2>
-            <h4>1. Estrutura do Programa: </h4><p> - Um programa em Python é formado por uma série de instruções executadas sequencialmente. Cada arquivo Python usa a extensão `.py` e pode conter funções, classes e blocos de código.</p>
+            <h2>4. Matrizes</h2>
+            <p>Matrizes são uma generalização dos vetores, onde armazenamos dados em uma tabela bidimensional (linhas e colunas). No Python, elas podem ser representadas como listas de listas.</p>>
             <br>
-            <p> - Exemplo:</p>
+            <h4>Exemplo de Código:</h4>
+            <p># Criação de uma matriz 2x3</p>
+            <p>matriz = [</p>
+            <p>    [1, 2, 3],</p>
+            <p>    [4, 5, 6]</p>
+            <p>]</p>
             <br>
-            <h4>2. Execute o Instalador: </h4><p>No Windows, inicie o instalador e não se esqueça de marcar a opção “Add Python to PATH” para facilitar o acesso ao Python a partir do prompt de comando. Em macOS e Linux, você pode instalar Python usando gerenciadores de pacotes como Homebrew ou apt-get.</p>
+            <p># Acessando elementos da matriz</p>
+            <p>print(matriz[0][1]) # Saída: 2</p>
+            <p>print(matriz[1][2]) # Saída: 6</p>
             <br>
-            <h4>3. Verifique a Instalação: </h4><p>Abra o terminal ou o prompt de comando e digite `python --version` para confirmar que a instalação foi realizada corretamente.</p>
+            <p># Modificando um valor na matriz</p>
+            <p>matriz[0][2] = 10</p>
+            <p>print(matriz) # Saída: [[1, 2, 10], [4, 5, 6]]</p>
+            <img src="matriz.jpg.png" width=100% />
         </section>
 
         <section id="servicos">
-            <h2>Instalação e Configuração</h2>
-            <h4>1. Obtenha o Python: </h4><p>Vá ao site oficial do Python ([python.org](https://www.python.org/)) e baixe a versão mais adequada para o seu sistema operacional (Windows, macOS, Linux).</p>
+            <h2>5. Manipulação de Arquivos</h2>
+            <p>A manipulação de arquivos é uma parte importante da programação, permitindo a leitura, escrita e exclusão de arquivos de dados no sistema.</p>
             <br>
-            <h4>2. Execute o Instalador: </h4><p>No Windows, inicie o instalador e não se esqueça de marcar a opção “Add Python to PATH” para facilitar o acesso ao Python a partir do prompt de comando. Em macOS e Linux, você pode instalar Python usando gerenciadores de pacotes como Homebrew ou apt-get.</p>
+            <h2>5.1. Criando e Escrevendo em Arquivos</h2>
+            <P>Podemos criar e escrever dados em um arquivo usando o modo "w" (escrita) ou "a" (acréscimo).</P>
             <br>
-            <h4>3. Verifique a Instalação: </h4><p>Abra o terminal ou o prompt de comando e digite `python --version` para confirmar que a instalação foi realizada corretamente.</p>
-        </section>
+            <h4>Exemplo de Código:</h4>
+            <p># Criação e escrita em um arquivo</p>
+            <p>with open("arquivo.txt", "w") as arquivo:</p>
+            <p>    arquivo.write("Olá, mundo!\n")</p>
+            <p>    arquivo.write("Escrevendo em um arquivo.\n")</p>
+            <img src="arq1.jpg.png" width=100% />
+            <br>
+            <h2>5.2. Lendo Arquivos</h2>
+            <p>Para ler o conteúdo de um arquivo, usamos o modo "r".</p>
+            <br>
+            <h4>Exemplo de Código:</h4>
+            <p># Leitura de um arquivo</p>
+            <p>with open("arquivo.txt", "r") as arquivo:</p>
+            <p>    conteudo = arquivo.read()</p>
+            <p>    print(conteudo)</p>
+            <img src="arq2.jpg.png" width=100% />
+            <br>
+            <h2>5.3. Excluindo Arquivos</h2>
+            <p>Para apagar um arquivo, utilizamos o módulo "os".</p>
+            <br>
+            <h4>Exemplo de Código:</h4>
+            <p>import os</p>
+            <br>
+            <p># Verificação e exclusão de arquivo</p>
+            <p>if os.path.exists("arquivo.txt"):</p>
+            <p>    os.remove("arquivo.txt")</p>
+            <p>    print("Arquivo removido com sucesso.")</p>
+            <p>else:</p>
+            <p>    print("O arquivo não existe.")</p>
+            <img src="arq3.jpg.png" width=100% />
 
-        <section id="servicos">
-            <h2>Instalação e Configuração</h2>
-            <h4>1. Obtenha o Python: </h4><p>Vá ao site oficial do Python ([python.org](https://www.python.org/)) e baixe a versão mais adequada para o seu sistema operacional (Windows, macOS, Linux).</p>
-            <br>
-            <h4>2. Execute o Instalador: </h4><p>No Windows, inicie o instalador e não se esqueça de marcar a opção “Add Python to PATH” para facilitar o acesso ao Python a partir do prompt de comando. Em macOS e Linux, você pode instalar Python usando gerenciadores de pacotes como Homebrew ou apt-get.</p>
-            <br>
-            <h4>3. Verifique a Instalação: </h4><p>Abra o terminal ou o prompt de comando e digite `python --version` para confirmar que a instalação foi realizada corretamente.</p>
-        </section>
-
-        <section id="servicos">
-            <h2>Instalação e Configuração</h2>
-            <h4>1. Obtenha o Python: </h4><p>Vá ao site oficial do Python ([python.org](https://www.python.org/)) e baixe a versão mais adequada para o seu sistema operacional (Windows, macOS, Linux).</p>
-            <br>
-            <h4>2. Execute o Instalador: </h4><p>No Windows, inicie o instalador e não se esqueça de marcar a opção “Add Python to PATH” para facilitar o acesso ao Python a partir do prompt de comando. Em macOS e Linux, você pode instalar Python usando gerenciadores de pacotes como Homebrew ou apt-get.</p>
-            <br>
-            <h4>3. Verifique a Instalação: </h4><p>Abra o terminal ou o prompt de comando e digite `python --version` para confirmar que a instalação foi realizada corretamente.</p>
-        </section>
-
-        <section id="servicos">
-            <h2>Instalação e Configuração</h2>
-            <h4>1. Obtenha o Python: </h4><p>Vá ao site oficial do Python ([python.org](https://www.python.org/)) e baixe a versão mais adequada para o seu sistema operacional (Windows, macOS, Linux).</p>
-            <br>
-            <h4>2. Execute o Instalador: </h4><p>No Windows, inicie o instalador e não se esqueça de marcar a opção “Add Python to PATH” para facilitar o acesso ao Python a partir do prompt de comando. Em macOS e Linux, você pode instalar Python usando gerenciadores de pacotes como Homebrew ou apt-get.</p>
-            <br>
-            <h4>3. Verifique a Instalação: </h4><p>Abra o terminal ou o prompt de comando e digite `python --version` para confirmar que a instalação foi realizada corretamente.</p>
-        </section>
-
-        <section id="servicos">
-            <h2>Instalação e Configuração</h2>
-            <h4>1. Obtenha o Python: </h4><p>Vá ao site oficial do Python ([python.org](https://www.python.org/)) e baixe a versão mais adequada para o seu sistema operacional (Windows, macOS, Linux).</p>
-            <br>
-            <h4>2. Execute o Instalador: </h4><p>No Windows, inicie o instalador e não se esqueça de marcar a opção “Add Python to PATH” para facilitar o acesso ao Python a partir do prompt de comando. Em macOS e Linux, você pode instalar Python usando gerenciadores de pacotes como Homebrew ou apt-get.</p>
-            <br>
-            <h4>3. Verifique a Instalação: </h4><p>Abra o terminal ou o prompt de comando e digite `python --version` para confirmar que a instalação foi realizada corretamente.</p>
-        </section>
-
-        <section id="servicos">
-            <h2>Instalação e Configuração</h2>
-            <h4>1. Obtenha o Python: </h4><p>Vá ao site oficial do Python ([python.org](https://www.python.org/)) e baixe a versão mais adequada para o seu sistema operacional (Windows, macOS, Linux).</p>
-            <br>
-            <h4>2. Execute o Instalador: </h4><p>No Windows, inicie o instalador e não se esqueça de marcar a opção “Add Python to PATH” para facilitar o acesso ao Python a partir do prompt de comando. Em macOS e Linux, você pode instalar Python usando gerenciadores de pacotes como Homebrew ou apt-get.</p>
-            <br>
-            <h4>3. Verifique a Instalação: </h4><p>Abra o terminal ou o prompt de comando e digite `python --version` para confirmar que a instalação foi realizada corretamente.</p>
         </section>
 
         <section id="servicos">
